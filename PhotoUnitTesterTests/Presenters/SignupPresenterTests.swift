@@ -9,16 +9,16 @@ import XCTest
 @testable import PhotoUnitTester
 
 class SignupPresenterTests: XCTestCase {
-    var signupFormModel: SignupForModel!
-    var mockSignupModelValidator: MockSignupValidator!
+    var signupFormModel: SignupFormModel!
+    var mockSignupModelValidator: MockSignupModelValidator!
     var mockSignupWebService: MockSignupWebService!
     var sut: SignupPresenter!
     var mockSignupViewDelegate: MockSignupViewDelegate!
 
     
     override func setUpWithError() throws {
-         signupFormModel = SignupForModel(firstName: "Test", lastName: "Tester", email: "Tester@test.com", password: "12345", repeatPassword: "12345")
-         mockSignupModelValidator = MockSignupValidator()
+         signupFormModel = SignupFormModel(firstName: "Test", lastName: "Tester", email: "Tester@test.com", password: "12345", repeatPassword: "12345")
+         mockSignupModelValidator = MockSignupModelValidator()
          mockSignupWebService = MockSignupWebService()
          mockSignupViewDelegate = MockSignupViewDelegate()
          sut = SignupPresenter(formModelValidator: mockSignupModelValidator, webService: mockSignupWebService, delegate: mockSignupViewDelegate)

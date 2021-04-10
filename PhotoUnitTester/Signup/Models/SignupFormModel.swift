@@ -1,5 +1,5 @@
 //
-//  SignupForModel.swift
+//  SignupFormModel.swift
 //  PhotoUnitTester
 //
 //  Created by George Cremer on 09/04/2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SignupForModel {
+struct SignupFormModel {
     let firstName: String
     let lastName: String
     let email: String

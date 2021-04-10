@@ -7,19 +7,19 @@
 
 import Foundation
 
-class SignupPresenter{
+class SignupPresenter: SignupPresenterProtocol {
  
     private var formModelValidator: SignupModelValidatorProtocol
     private var webService: SignupWebServiceProtocol!
     private weak var delegate: SignupViewDelegateProtocol?
     
-    init(formModelValidator: SignupModelValidatorProtocol, webService: SignupWebServiceProtocol,  delegate: SignupViewDelegateProtocol) {
+    required init(formModelValidator: SignupModelValidatorProtocol, webService: SignupWebServiceProtocol,  delegate: SignupViewDelegateProtocol) {
         self.formModelValidator = formModelValidator
         self.webService = webService
         self.delegate = delegate
     }
     
-    func processUserSignup(formModel: SignupForModel) {
+    func processUserSignup(formModel: SignupFormModel) {
         
         if !formModelValidator.isFirstNameValid(firstName: "") {
             return

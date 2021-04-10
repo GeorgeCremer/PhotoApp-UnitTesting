@@ -1,5 +1,5 @@
 //
-//  MockSignupValidator.swift
+//  MockSignupModelValidator.swift
 //  PhotoUnitTesterTests
 //
 //  Created by George Cremer on 09/04/2021.
@@ -8,7 +8,7 @@
 import Foundation
 @testable import PhotoUnitTester
 
-class MockSignupValidator: SignupModelValidatorProtocol {
+class MockSignupModelValidator: SignupModelValidatorProtocol {
    
     var isFirstNameValidated: Bool = false
     var isLastNameValidated: Bool = false
