@@ -25,9 +25,9 @@ class MockURLProtocol: URLProtocol {
         } else {
             client?.urlProtocol(self, didLoad: MockURLProtocol.stubResponseData ?? Data())
         }
-
         client?.urlProtocolDidFinishLoading(self)
     }
 
     override func stopLoading() {}
 }
+

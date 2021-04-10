@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SignupWebService {
+class SignupWebService: SignupWebServiceProtocol {
     private var urlString: String
     private var urlSession: URLSession
 
@@ -21,7 +21,6 @@ class SignupWebService {
             completionHandler(nil, SignupError.invalidRequestURLString)
             return
         }
-
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
